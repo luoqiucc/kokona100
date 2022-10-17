@@ -10,6 +10,7 @@ const server = new Koa()
 
 server.use(koaStatic(path.join(__dirname, '..', '..', 'public')))
 server.use(koaStatic(path.join(__dirname, '..', '..', 'upload')))
+server.use(koaStatic(path.join(__dirname, '..', '..', 'output')))
 server.use(views(path.join(__dirname, '..', 'views'), {
     extension: 'pug'
 }))

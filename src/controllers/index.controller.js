@@ -1,14 +1,38 @@
+const ImageFactory = require('../services/imageFactory.service')
+const {
+    getToken
+} = require('../utils/common.utils')
+
 class IndexController {
     async home(ctx, next) {
-        ctx.cookies.set('user', Math.random())
-        await ctx.render('home')
+        let token = ctx.cookies.get('userToken')
+        if (!token) {
+            token = getToken()
+            ctx.cookies.set('userToken', token)
+        }
+        await ctx.render('home', {
+            token
+        })
     }
 
     async compositeImage(ctx, next) {
-        ctx.body = {
-            message: 'successful',
-            file: ctx.request.file
+        let token = ctx.cookies.get('userToken')
+        if (!token) {
+            return ctx.redirect('/')
         }
+
+        let file = ctx.request.file
+        if (!file) {
+            return ctx.redirect('/')
+        }
+
+        let {filename} = file
+
+        await ImageFactory.compositeImages(filename, token)
+
+        await ctx.render('download', {
+            imgUrl: '/' + token + '.jpg'
+        })
     }
 }
 
