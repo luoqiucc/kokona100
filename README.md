@@ -8,3 +8,6 @@
 1. 上传图片
 2. 点击印章按钮
 3. 下载图片
+
+
+![img](https://pic1.imgdb.cn/item/634d46bf16f2c2beb14a38b8.png)
