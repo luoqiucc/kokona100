@@ -8,7 +8,9 @@ class IndexController {
         let token = ctx.cookies.get('userToken')
         if (!token) {
             token = getToken()
-            ctx.cookies.set('userToken', token)
+            ctx.cookies.set('userToken', token, {
+                maxAge: 60 * 1000 * 60 * 24 * 5
+            })
         }
         await ctx.render('home', {
             token
@@ -31,7 +33,8 @@ class IndexController {
         await ImageFactory.compositeImages(filename, token)
 
         await ctx.render('download', {
-            imgUrl: '/' + token + '.jpg'
+            imgUrl: '/' + token + '.jpg',
+            imgName: token + '.jpg'
         })
     }
 }

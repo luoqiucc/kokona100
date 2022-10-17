@@ -1,4 +1,11 @@
 extends layout
 
 block content
-    img(class='demo' src=imgUrl)
+    div(class='main')
+        div(class='upload-box')
+            img(class='demo', src=imgUrl)
+            br
+            br
+            div(class='row')
+                p 长按图片保存，或者点击下面的下载按钮
+                a(class='button download-button', download=imgName, href=imgUrl) 下载图片

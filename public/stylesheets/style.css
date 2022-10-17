@@ -2,14 +2,34 @@
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .upload-box{
-    padding: 20px;
     max-width: 500px;
     border-radius: 5px;
-    background-color: #ff7b7b;
+}
+
+.title{
+    padding: 0 10px;
+    font-style: italic;
+}
+
+.line{
+    text-decoration: line-through;
+}
+
+.row{
+    padding: 18px;
+    margin-bottom: 20px;
+    background-color: #9E7676;
+}
+
+.tip *{
+    vertical-align: bottom;
+}
+
+.warning{
+    color: #ff5454;
 }
 
 .upload-button{
@@ -34,5 +54,28 @@
 }
 
 .demo{
-    width: 500px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.button{
+    background: none;
+    padding: 6px 8px;
+    display: inline-block;
+    border: 3px solid #FFF8EA;
+    border-radius: 8px;
+    box-shadow: none;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.submit-button{
+    display: block;
+    margin: auto;
+}
+
+.bgc-white{
+    background-color: white;
+    color: #9E7676;
 }
