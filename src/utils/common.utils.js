@@ -2,7 +2,7 @@ const md5 = require('md5')
 
 class CommonUtils{
     getToken(){
-        return md5(new Date())
+        return md5(Date.now().toString())
     }
 
     // 生成0-1000之间的随机数
