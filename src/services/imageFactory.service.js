@@ -15,6 +15,10 @@ class ImageFactoryService {
             console.log(e)
         }
     }
+
+    async compositeTeenStudy(){
+
+    }
 }
 
 module.exports = new ImageFactoryService()
