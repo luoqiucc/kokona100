@@ -1,13 +1,22 @@
 ### 一个让心奈给你的图片打上100分的小玩意儿
 
-~~网站地址: [kokona100]()~~  
-! 演示站点已关闭
+### 部署
+**Step 1**: 克隆项目到本地
+```shell
+git clone git@github.com:zhangao204/kokona100.git
+```
 
-----------------
+**Step 2**: 安装依赖
+```shell
+npm install
+```
 
-### 使用步骤
-1. 上传图片
-2. 点击印章按钮
-3. 下载图片
+**Step 3**: 启动项目
+```shell
+node src/index.js
+```
 
-![img](https://pic1.imgdb.cn/item/634d46bf16f2c2beb14a38b8.png)
+### 使用
+- 浏览器访问 127.0.0.1:8080
+- 上传图片
+- 下载处理后的图像
