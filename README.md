@@ -3,7 +3,7 @@
 ### 部署
 **Step 1**: 克隆项目到本地
 ```shell
-git clone git@github.com:zhangao204/kokona100.git
+git clone git@github.com:luoqiucc/kokona100.git
 ```
 
 **Step 2**: 安装依赖
